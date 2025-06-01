@@ -1,8 +1,7 @@
 FROM node:18-slim
 
-# Install dependencies for Puppeteer
+# Install Chromium dependencies (full compatibility mode)
 RUN apt-get update && apt-get install -y \
-  wget \
   ca-certificates \
   fonts-liberation \
   libappindicator3-1 \
@@ -18,17 +17,33 @@ RUN apt-get update && apt-get install -y \
   libxcomposite1 \
   libxdamage1 \
   libxrandr2 \
+  libgbm1 \
+  libpango-1.0-0 \
+  libpangocairo-1.0-0 \
+  libxss1 \
   xdg-utils \
-  --no-install-recommends \
-  && apt-get clean \
-  && rm -rf /var/lib/apt/lists/*
+  libglib2.0-0 \
+  libu2f-udev \
+  libdrm2 \
+  libxext6 \
+  libexpat1 \
+  libpci3 \
+  libxfixes3 \
+  libjpeg62-turbo \
+  libpng16-16 \
+  lsb-release \
+  wget \
+  --no-install-recommends && \
+  apt-get clean && rm -rf /var/lib/apt/lists/*
 
-# Create app directory
+# Set working directory
 WORKDIR /app
+
+# Copy project files
 COPY . .
 
-# Install app dependencies
+# Install dependencies
 RUN npm install
 
-# Run the script
+# Launch script
 CMD ["node", "index.js"]
