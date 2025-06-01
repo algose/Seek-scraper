@@ -2,12 +2,13 @@
   "name": "seek-scraper",
   "version": "1.0.0",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "start": "node index.js"
   },
   "dependencies": {
-    "puppeteer": "^21.3.8",
-    "node-telegram-bot-api": "^0.61.0"
+    "axios": "^1.4.0",
+    "cheerio": "^1.0.0-rc.12",
+    "node-telegram-bot-api": "^0.61.0",
+    "puppeteer": "^21.3.8"
   }
 }
