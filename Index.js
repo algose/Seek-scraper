@@ -1,4 +1,4 @@
-import puppeteer from 'puppeteer';
+/*import puppeteer from 'puppeteer';
 import TelegramBot from 'node-telegram-bot-api';
 
 const TELEGRAM_TOKEN = '8099674270:AAENXxI8xrQIITQqoFDLu6HQe2Dogv2NGjg';
