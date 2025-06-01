@@ -1,12 +1,13 @@
-import puppeteer from 'puppeteer';
+import puppeteer from 'puppeteer-core';
+process.env.PUPPETEER_EXECUTABLE_PATH = '/usr/bin/google-chrome';
+
 import TelegramBot from 'node-telegram-bot-api';
 
-const TELEGRAM_TOKEN = '8099674270:AAENXxI8xrQIITQqoFDLu6HQe2Dogv2NGjg';
-const CHAT_ID = '887930144';
-const SEEK_URL = 'https://www.seek.com.au/construction-labourer-jobs/in-Queensland-QLD?sortmode=ListedDate';
+const TELEGRAM_TOKEN = 'xxx';
+const CHAT_ID = 'xxx';
+const SEEK_URL = 'https://www.seek.com.au/...';
 
 const bot = new TelegramBot(TELEGRAM_TOKEN, { polling: false });
-
 (async () => {
   try {
     await bot.sendMessage(CHAT_ID, '🤖 Le scraper Seek est en cours de lancement…');
