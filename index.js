@@ -4,7 +4,7 @@ process.env.PUPPETEER_EXECUTABLE_PATH = '/usr/bin/google-chrome';
 import TelegramBot from 'node-telegram-bot-api';
 
 const TELEGRAM_TOKEN = 'xxx';
-const CHAT_ID = 'xxx';
+const CHAT_ID = '-1002603476314';
 const SEEK_URL = 'https://www.seek.com.au/...';
 
 const bot = new TelegramBot(TELEGRAM_TOKEN, { polling: false });
